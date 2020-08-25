@@ -25,6 +25,9 @@ document.onkeydown = function (e) {
         dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
         dino.style.left = (dinoX - 130) + "px";
     }
+    if (e.keyCode == 32) {
+      location.reload()
+    }
 }
 
 setInterval(() => {
@@ -42,7 +45,7 @@ setInterval(() => {
     offsetY = Math.abs(dy - oy);
     // console.log(offsetX, offsetY)
     if (offsetX < 73 && offsetY < 52) {
-        gameOver.innerHTML = "OOPS!!! Game Over - Reload to Play Again"
+        gameOver.innerHTML = "OOPS!!! Game Over -Hit space to Restart"
         obstacle.classList.remove('obstacleAni')
         audiogo.play();
         setTimeout(() => {
@@ -61,7 +64,7 @@ setInterval(() => {
             aniDur = parseFloat(window.getComputedStyle(obstacle, null).getPropertyValue('animation-duration'));
             newDur = aniDur - 0.1;
             obstacle.style.animationDuration = newDur + 's';
-            console.log('New animation duration: ', newDur)
+            // console.log('New animation duration: ', newDur)
         }, 500);
 
     }
