@@ -59,6 +59,10 @@ body{
     
 }
 
+.gameOver span.mobile{
+    visibility: hidden;
+}
+
 #scoreCont{
     font-size: 2.5rem;
     color: #54212f;
@@ -111,6 +115,16 @@ body{
 
     .obstacleAni{
         animation: obstacleAni 4s linear infinite;
+    }
+
+    .gameOver span.mobile{
+        visibility: visible;
+    }
+    .gameOver{
+        text-align: center;
+    }
+    .gameOver span.desktop{
+        visibility: hidden;
     }
 
 }

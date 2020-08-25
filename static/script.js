@@ -6,6 +6,26 @@ audiogo = new Audio('../res/gameover.mp3');
 setTimeout(() => {
     audio.play()
 }, 1000);
+
+document.onmousedown = function(f){
+    dino = document.querySelector('.dino');
+    dino.classList.add('animateDino');
+    setTimeout(() => {
+        dino.classList.remove('animateDino')
+    }, 700);
+
+}
+
+document.onscroll = function(h){
+    dino = document.querySelector('.dino');
+    dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dino.style.left = dinoX + 130 + "px";
+}
+
+document.ondblclick = (g)=>{
+    location.reload()
+}
+
 document.onkeydown = function (e) {
     console.log("Key code is: ", e.keyCode)
     if (e.keyCode == 38) {
@@ -45,7 +65,7 @@ setInterval(() => {
     offsetY = Math.abs(dy - oy);
     // console.log(offsetX, offsetY)
     if (offsetX < 73 && offsetY < 52) {
-        gameOver.innerHTML = "OOPS!!! Game Over -Hit space to Restart"
+        gameOver.innerHTML = "OOPS!!! Game Over <span class='desktop'>-Hit space to Restart </span> <span class='mobile'>Double tap on screen to restart</span> "
         obstacle.classList.remove('obstacleAni')
         audiogo.play();
         setTimeout(() => {
