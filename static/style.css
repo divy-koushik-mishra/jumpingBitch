@@ -87,6 +87,19 @@ body{
     font-weight: 700;
 }
 
+.version{
+    position: absolute;
+    bottom: .5rem;
+    right: .2rem;
+    border: .2rem solid black;
+    border-radius: 2rem;
+    width: 20rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
 @keyframes dino{
     0%{
         bottom: 0;
@@ -120,6 +133,7 @@ body{
     .gameOver span.mobile{
         visibility: visible;
     }
+<<<<<<< HEAD
     .gameOver{
         text-align: center;
     }
@@ -128,3 +142,6 @@ body{
     }
 
 }
+=======
+}
+>>>>>>> 09ded9ad7d36c5853167d8febb80c3328ebb7e52
