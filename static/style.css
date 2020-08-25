@@ -68,6 +68,19 @@ body{
     border-radius: 1rem;
 }
 
+.version{
+    position: absolute;
+    bottom: .5rem;
+    right: .2rem;
+    border: .2rem solid black;
+    border-radius: 2rem;
+    width: 20rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
 @keyframes dino{
     0%{
         bottom: 0;
